@@ -5,11 +5,42 @@
 
     <style>
 
-        header, .searchbar {
+        header {
             color: #222;
-            font-size: 14px;
+            font-size: 13px;
             font-family: Roboto,arial,sans-serif;
             background: #fff;
+        }
+        .header-img {
+            display: block;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        .header-dots{
+            display: block;
+            position: relative;
+            width: 16px;
+            height: 16px;
+        }
+        .searchbar {
+            display: block;
+            position: relative;
+        }
+        footer {
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 400;
+            color: #70757a;
+            background-color: rgb(239, 239, 239);
+            font-family: Roboto,arial,sans-serif;
+            object-position: bottom;
         }
         .center {
             display: block;
@@ -18,50 +49,37 @@
         .ul-header {
             list-style-type: none;
             margin: 0;
-            padding: 6px;
+            padding: 0px;
         }
         .ul-footer {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            font-family: Roboto,arial,sans-serif;
-            color: #70757a;
-            font-weight: 400;
-            font-size: 13.3333px;
-            background-color: rgb(239, 239, 239);
         }
         .li-left {
             display: inline;
             float: left;
+            margin: 10px;
         }
         .li-right {
             display: inline;
             float: right;
+            margin: 10px;
         }
-        .li-left-footer {
-            display: inline;
-            float: left;
-            font-family: Roboto,arial,sans-serif;
-            color: #70757a;
-            font-weight: 400;
-            font-size: 13.3333px;
-            background-color: rgb(239, 239, 239);
-        }
-        .li-right-footer{
-            display: inline;
-            float: right;
-            font-family: Roboto,arial,sans-serif;
-            color: #70757a;
-            font-weight: 400;
-            font-size: 13.3333px;
-            background-color: rgb(239, 239, 239);
-        }
-        .li-left:hover, .li-right:hover, .li-left-footer:hover, .li-right-footer:hover {
+        .li-left:hover, .li-right:hover {
             text-decoration: underline;
         }
         .logo {
-            display: block;
+            display: flex;
             margin: auto;
+            padding-top: 90px;
+            width: auto;
+            position: relative;
+            max-height: 92px;
+            object-fit: contain;
+            object-position: center bottom;
+            max-height: 100%;
+            max-width: 100%;
         }
         .searchbar{
             padding-top: 10px;
@@ -76,8 +94,8 @@
             <ul>
                 <li class="li-left">About</li>
                 <li class="li-left">Store</li>
-                <li class="li-right">000</li>
-                <li class="li-right">000</li>
+                <li class="li-right"><a href="https://github.com/mgerasimovich" target="_blank"><img class="header-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Velemir_Khlebnikov_self_portrait.jpg" alt="My GitHub link!"></a></li>
+                <li class="li-right"><a href="https://github.com/mgerasimovich" target="_blank"><img class="header-dots" src="https://cdn.icon-icons.com/icons2/1129/PNG/512/buttonsymbolofninedots_80014.png" alt="My GitHub link!"></a></li>
                 <li class="li-right">Images</li>
                 <li class="li-right">Gmail</li>
             </ul>
@@ -85,18 +103,23 @@
     </header>
 
     <!-- Google logo -->
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="logo">
-    
+    <img class ="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+
     <!-- search bar -->
     <div class="searchbar">
     <input type="text" placeholder="" class="center">
     </div>
 
     <footer>
+        <div class ="center"></div>
         <ul class="ul-footer">
-            <li class="li-left-footer">Advertising</li>
-            <li class="li-left-footer">Business</li>
-            <li class="li-left-footer">How Search works</li>
+            <li class="li-left">Advertising</li>
+            <li class="li-left">Business</li>
+            <li class="li-left">How Search works</li>
+            <li class="center">Carbon neutral since 2007</li>
+            <li class="li-right">Privacy</li>
+            <li class="li-right">Terms</li>
+            <li class="li-right">Settings</li>
         </ul>
     </footer>
 
