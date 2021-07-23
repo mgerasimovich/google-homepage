@@ -2,6 +2,9 @@
 <html lang="eng">
 <head>
     <title>Google</title>
+    
+    <!-- Load icon library-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
 
@@ -24,9 +27,42 @@
             width: 16px;
             height: 16px;
         }
-        .searchbar {
-            display: block;
+        .searchbar-container {
+            display: flex;
+            flex-direction: row;
+            flex-flow: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            list-style: none;
             position: relative;
+            border: 1px #dfe1e5 solid;
+            border-radius: 24px;
+            width: auto;
+            max-width: 584px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 44px;
+            box-shadow: none;
+        }
+        .searchbar-item {
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        input {
+            display: flex;
+            align-items: center;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: hidden;
+            background-color: #fff;
+            outline: none;
+            width: 500px;
+        }
+        .searchbar-container:hover {
+            box-shadow: 2px 2px 2px 2px #dfe1e5;
         }
         footer {
             display: block;
@@ -43,7 +79,8 @@
             object-position: bottom;
         }
         .center {
-            display: block;
+            display: flex;
+            justify-content: flex-start;
             margin: auto;
         }
         .ul-header {
@@ -52,6 +89,7 @@
             padding: 0px;
         }
         .ul-footer {
+            display: flex;
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -71,24 +109,58 @@
         }
         .logo {
             display: flex;
-            margin: auto;
+            align-items: center;
+            justify-content: center;
             padding-top: 90px;
-            width: auto;
-            position: relative;
-            max-height: 92px;
-            object-fit: contain;
-            object-position: center bottom;
-            max-height: 100%;
-            max-width: 100%;
-        }
-        .searchbar{
-            padding-top: 10px;
-        }
+            padding-left: 45px;
 
+        }
+        .logo-img {
+            height: 92px;
+            width: 272px;
+        }
+        .searchbar {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+        .blank {
+            background-color: transparent;
+            border: none;
+            color: #9aa0a6;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .button-style {
+            display: flex;
+            justify-content: flex-start;
+            background: #f8f9fa;
+            color: #3c4043;
+            text-align: center;
+            padding: 0 16px;
+            width: auto;
+            height: auto;
+            margin: 11px 4px;
+            font-weight: thin;
+            font-family: Roboto,arial,sans-serif;
+            font-size: 14px;
+            height: 36px;
+            min-width: 54px;
+            line-height: 27px;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- Header menu -->
     <header class="ul-header">
         <nav>
             <ul>
@@ -103,30 +175,36 @@
     </header>
 
     <!-- Google logo -->
-    <img class ="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
-
+    <div class="logo">
+         <img class ="logo-img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+    </div>
     <!-- search bar -->
-    <div class="searchbar">
-    <input type="text" placeholder="" class="center">
+        <ul class="searchbar-container">
+            <li class="searchbar-item"><button class="blank"><i class="material-icons">search</i></button></li>
+            <li class="searchbar-item"><form class="searchbar" action="https://images.unsplash.com/photo-1557109925-3618ccfc2013?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80" autocomplete="off">
+                <input type="text" placeholder="" name="search"></form></li>
+            <li class="searchbar-item"><button class="blank"><i class="material-icons">mic</i></button></li>
+        </ul>
+
+    <!-- Google Search and I'm Feeling Lucky buttons -->
+    <div>
+        <ul class="button-container">
+            <li class="button-style">Google Search</li>
+            <li class="button-style">I'm Feeling Lucky</li>
+        </ul>
     </div>
 
     <footer>
-        <div class ="center"></div>
         <ul class="ul-footer">
             <li class="li-left">Advertising</li>
             <li class="li-left">Business</li>
             <li class="li-left">How Search works</li>
-            <li class="center">Carbon neutral since 2007</li>
+            <li class="center"><i class="material-icons" style=color:green;>park</i>
+                Carbon neutral since 2007</li>
             <li class="li-right">Privacy</li>
             <li class="li-right">Terms</li>
             <li class="li-right">Settings</li>
         </ul>
     </footer>
-
 </body>
-
-<footer>
-
-</footer>
-
 </html>
